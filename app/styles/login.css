@@ -1,5 +1,11 @@
-body,html{width:100%;height:100%}
-.form-control{width:90%;margin:0 auto;}
-.zhuc{width:40%;margin:5% 10% 0 5%;}
-.denglu{width:40%;margin-top:5%;}
-.tiaokuan{margin-left:5%}
+.login{width:280px;height:300px;position:absolute;top:50%;left:50%;margin:-140px 0 0 -150px;color:#fff}
+.bt{font-size:20px;text-align:center;margin:0 0 20px 0;}
+.login form{width:250px;margin:0 auto}
+.login form label{font-size:18px;}
+#username{margin:10px 0 20px 20px;}
+#password{margin:10px 0 20px 20px;}
+.tiaokuan{margin:0 0 20px 10px;}
+.zd{width:190px;margin:0 auto}
+.zhuc{color:#000;width:80px;height:30px;font-size:18px;}
+.denglu{color:#000;width:80px;height:30px;font-size:18px;margin-left:20px;}
+
