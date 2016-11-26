@@ -1,0 +1,161 @@
+.big-bar{width:100%;height:100%;}
+.header-ml{
+	width:100%;
+	height:2rem;
+	background:black;
+	color:white;
+	font-size:0.8rem;	
+	text-align:center;
+	line-height:2rem;
+	font-family: "微软雅黑";
+	}
+.search{
+	margin:0 auto;
+	margin-top:0.90rem;
+	/*float:left;*/
+}
+.ipt-sou{
+	width:70%;
+	height:1.4rem;
+	margin-left:0.75rem;
+	border-radius:0.5rem;
+	float:left;
+	padding-left:1rem;
+	font-size:0.6rem;
+	color:#000000;
+}
+.search span{
+	width:3.2rem;
+	height:1.4rem;
+	font-size:0.6rem;
+	background:#9BCF00;
+	color:white;
+	display:block;
+	border-radius:0.35rem;
+	font-weight:600;
+	font-family: "微软雅黑";
+	margin-left:0.2rem;
+	text-align:center;
+	line-height:1.4rem;
+	float:left;
+	outline:none;
+	border:0.05rem #DBDBDB soild;
+}
+
+
+.bug-bar{
+	margin-left:0.8rem;
+	margin-right:0.8rem;
+	height:10rem;
+	background:#E4E5E4;;
+	/*border:0.05rem solid #0190DD;*/
+	margin-top:2.2rem;
+	border-radius: 0.8rem;
+    
+}
+.name-ml{
+	width:92%;
+	height:1rem;
+	font-size:0.65rem;
+	color:#000000;
+	margin-left:0.6rem;
+	margin-top:0.4rem;
+    /*background:red;*/
+    line-height:1rem;
+    float:left;
+}
+.bug-content{
+	width:92%;
+	height:6rem;
+	float:left;
+	margin-left:0.6rem;
+	margin-top:0.4rem;
+	/*background:yellow;*/
+}
+.bug-left{
+	width:70%;
+	height:100%;
+	/*background:darkblue;*/
+	font-size:0.65rem;
+	
+	font-family: "微软雅黑";
+	color:#000000;
+	float:left;
+}
+.bug-name{
+	font-weight:600;
+	width:100%;
+	height:1.2rem;
+	/*background: red;*/
+	margin-top:0.5rem;
+	float:left;
+	font-size:0.65rem;
+	color:#000000;
+}
+.bug-say{
+	width:100%;
+	height:4rem;
+	float:left;
+	/*background:lime;*/
+	margin-top:0.3rem;
+}
+.bug-right{
+	width:25%;
+	float:right;
+}
+
+.time-ml{
+	width:92%;
+	height:1rem;
+	font-size:0.65rem;
+	color:#000000;
+	margin-left:0.6rem;
+	margin-top:0.4rem;
+    /*background:lime;*/
+    line-height:1rem;
+    float:left;
+    text-align:right;
+    padding-right:1rem;
+}
+.importance,.pinlv,.errortion{
+	width:88%;
+	height:1.2rem;
+	background:#AF0004;
+	margin-top:0.6rem;
+	color:#FFFFFF;
+	font-size:0.4rem;
+	text-align:center;
+	line-height:1.2rem;
+	
+}
+.pinlv{
+	background:;
+}
+.errortion{
+	background:;
+}
+
+.addbug{
+	width:100%;
+	height:2rem;
+	background:black;
+	opacity:0.3;
+	position: fixed;
+	bottom:0;
+	}
+.btn-addbug{
+	display: block;
+	margin:0 auto;
+	width:2rem;
+	height:2rem;
+/*	background:red;*/
+	border-radius:50%;
+	border:1px solid red;
+	color:white;
+    font-size:2rem;
+    text-align:center;
+    line-height:1.5rem;
+     margin-bottom:2rem;
+    background-color:transparent;
+    
+}
