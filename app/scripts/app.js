@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular.module('xm11App', ["ui.router"]).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+angular.module('xm11App', ["ui.router","textAngular"]).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 	$urlRouterProvider.when('','/login')
 	$stateProvider.state('login',{
 		url:'/login',

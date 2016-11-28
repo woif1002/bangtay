@@ -1,5 +1,5 @@
 <div class="big-bar">
-    <div class="header-ml">测试人员</div>
+    <div class="header-ml" ng-model="cc">{{cc}}</div>
     <p class="search"><input type="text" name="" id="" value="" placeholder="搜索" class="ipt-sou" ng-model="M_aa"/><img src="../images/33.png"></p>
 </div>
 <!--<div class="bug-bar">
@@ -32,82 +32,9 @@
 	</div>
 </div>
 
-
-
-
-
-
-
-
-
-
-<!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
-  <div class="panel panel-default" ng-repeat="x in data">
-    <div class="panel-heading" role="tab" id="heading{{$index}}" >
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          	<div class="bug-list">
-				<p class="bug-name">{{x.summary}}</p>
-				<p class="importance">{{x.importance}}</p>
-				<p class="time-ml">{{x.date}}</p>
-			</div>
-		
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-		       <p class="faburen">发布人:{{x.from}}</p>
-			<p class="inport">重要性:{{x.importance}}</p>
-			<p class="pin">频率:{{x.frequency}}</p>
-			<p class="errors">错误状态:{{x.status}}</p>
-			<p class="times">时间:{{x.date}}</p>
-			<p class="bugs-name">bug名称:{{x.summary}}</p>
-			<div class="bug-xq"><p class="">详情:</p><span class="bug-n">{{x.description}}</span></div>
-			<!--<button type="button" value="">-->		
-      <!--</div>
-    </div>
-  </div>-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="addbug"><span class="btn-addbug"  ng-click="ff">+</span></div>
-
+<div class="addbug"><span class="btn-addbug"   ng-click="ff">+</span></div>
+	<p class="time-ml">{{x.date}}</p>
+</div>
 
 <!--<div>
   <div ng-repeat="x in data">
