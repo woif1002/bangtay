@@ -1,5 +1,9 @@
 angular.module('xm11App')
   .controller('xqCtrl',['$rootScope','$scope','$state','$http','$stateParams', function($rootScope,$scope,$state,$http,$stateParams){
+  		if(document.cookie.split('login=')[1]!=1&&!document.cookie){
+				$state.go('login')
+				return;
+			}
   	$scope.id=$stateParams
     	$http({
     		url:'http://www.bugcenter.com.cn:1511/item/'+$stateParams.id,
@@ -21,7 +25,7 @@ angular.module('xm11App')
     		    if(e. frequency ==0){
     		    	$scope.fre ="偶尔"
     		    }else if(e. frequency ==1){
-    		    	$scope.fre ="偶尔"
+    		    	$scope.fre ="经常"
     		    };
     		    
     		    
@@ -34,17 +38,31 @@ angular.module('xm11App')
     		    	$scope.sta ="已关闭"
     		    }
     		    
+    		    
+    		    //错误分类
+    		    
+    		    if(e.classify ==0){
+    		    	$scope.cwfl ="ui"
+    		    }else if(e.classify ==1){
+    		    	$scope.cwfl ="前端"
+    		    }else if(e.classify ==2){
+    		    	$scope.cwfl ="后台"
+    		    }
     	})   	
     $scope.list=function(){
     	$state.go("list")
     }
+    $scope.xf=function(){
+        $http({
+    			url:'http://www.bugcenter.com.cn:1511/item/'+$stateParams.id,
+    			method:'put',
+    			data:{status:1}
+	    	}).success(function(e){  
+	    		$scope.sta ="已解决";
+	    		$scope.data=e
+	    	})
+    }
     
-    $http({
-    	url:'http://www.bugcenter.com.cn:1511/item/'+$stateParams.id,
-    		method:'put',		
-    	}).success(function(e){  
-    		$scope.data=e
-    	})
    
     
   }]);

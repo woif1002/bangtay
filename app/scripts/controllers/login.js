@@ -15,6 +15,9 @@ angular.module('xm11App')
     		method:'post',
     		data:$scope.upuser
     	}).success(function(e){
+    		var day=new Date();
+    		day.setDate(day.getDate()+7)
+    		document.cookie="login=1;expires="+day.toGMTString();
     		$rootScope.user={}
             $rootScope.user.username=$scope.upuser.username
             $rootScope.user.uid= e.uid

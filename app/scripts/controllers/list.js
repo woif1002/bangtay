@@ -1,7 +1,13 @@
 angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$rootScope',function($scope,$state,$http,$rootScope){
+//	alert(document.cookie)
+	if(document.cookie.split('login=')[1]!=1&&!document.cookie){
+		$state.go('login')
+		return;
+	}
   $scope.ff=function(){
     $state.go('zj')
   }
+  
   $http({
     url:"http://www.bugcenter.com.cn:1511/users/"+$rootScope.user.uid,
     method:"get"
