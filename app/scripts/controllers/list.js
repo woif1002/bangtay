@@ -1,5 +1,6 @@
 angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$rootScope',function($scope,$state,$http,$rootScope){
-  
+ 
+ 
   $http({
     url:"http://www.bugcenter.com.cn:1511/users/"+$rootScope.user.uid,
     method:"get"
