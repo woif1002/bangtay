@@ -21,11 +21,11 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
 
   })
   $http({
-    url:"http://www.bugcenter.com.cn:1511/item",
+    url:"http://www.bugcenter.com.cn:1511/item/",
     method:"get",
     params:{'to':$rootScope.user.username}
   }).success(function(e){
-
+    console.log(e)
     $scope.data=e
         
   })
