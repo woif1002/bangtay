@@ -18,5 +18,9 @@ angular.module('xm11App', ["ui.router"]).config(['$stateProvider','$urlRouterPro
 	    url:'/list',
 	    templateUrl:"views/list.html",
 	    controller:"listCtrl"
+  	}).state('zj',{
+	    url:'/zj',
+	    templateUrl:"views/zj.html",
+	    controller:"zjCtrl"
   	})
 }]);
