@@ -5,58 +5,63 @@
 	<!-- 错误分类 -->
 	<p id="classify">错误分类：</p>
 	<div class="classify">
+		{{classify}}
 		<label>
-			<input type="checkbox" />设计
+			<input type="radio" value="0" ng-model='classify' />设计
 		</label>
 		<label>
-			<input type="checkbox" />前端
+			<input type="radio" value="1" ng-model='classify'/>前端
 		</label>
 		<label>
-			<input type="checkbox" />后台
+			<input type="radio" value="2" ng-model='classify'/>后台
 		</label>
 	</div>
 	
 	<!-- 发生频率 -->
 	<p id="frequency">发生频率：</p>
 	<div class="frequency">
+		{{frequency}}
 		<label>
-			<input type="checkbox" />偶尔
+			<input type="radio" value="0" ng-model='frequency'/>偶尔
 		</label>
 		<label>
-			<input type="checkbox" />经常
+			<input type="radio" value="1" ng-model='frequency'/>经常
 		</label>
 	</div>
 	<!-- 重要性 -->
 	<p id="importance">重要性：</p>
 	<div class="importance">
+		{{importance}}
 		<label>
-			<input type="checkbox" />重要
+			<input type="radio" value="0" ng-model='importance'/>重要
 		</label>
 		<label>
-			<input type="checkbox" />中等
+			<input type="radio" value="1" ng-model='importance'/>中等
 		</label>
 		<label>
-			<input type="checkbox" />一般
+			<input type="radio" value="2" ng-model='importance'/>一般
 		</label>
 	</div>
 	<!-- 错误状态 -->
 	<p id="status">错误状态：</p>
 	<div class="status">
+		{{status}}
 		<label>
-			<input type="checkbox" />已指派
+			<input type="radio" value="0" ng-model='status'/>已指派
 		</label>
 		<label>
-			<input type="checkbox" />已解决
+			<input type="radio" value="1" ng-model='status'/>已解决
 		</label>
 		<label>
-			<input type="checkbox" />已关闭
+			<input type="radio" value="2" ng-model='status'/>已关闭
 		</label>
 	</div>
 	
 	<!-- 简介 -->
 	<p>简介</p>
-	<text-angular ng-model="htmlVariable"></text-angular>
+	<text-angular ng-model="summary"></text-angular>
 	<!-- 描述 -->
 	<p>描述</p>
-	<text-angular ng-model="htmlVariable"></text-angular>
+	<text-angular ng-model="description"></text-angular>
+	<input type="button" value="提交" ng-click="fc()" class="tj"/>
 </div>
