@@ -1,0 +1,8 @@
+#tb{width:100%;height:60px;background:#000;line-height:60px;color:#fff;text-align:center;font-size:26px;}
+#ct{width:90%;height:auto;margin:0 auto;}
+#ct p{font-size:20px;margin-top:10px;}
+#ct label{margin:0 20px 0 0}
+.classify{margin:10px 0 10px 20px;font-size:20px;}
+.frequency{margin:10px 0 10px 20px;font-size:20px;}
+.importance{margin:10px 0 10px 20px;font-size:20px;}
+.status{margin:10px 0 10px 20px;font-size:20px;}

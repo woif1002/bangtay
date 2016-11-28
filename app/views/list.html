@@ -2,19 +2,25 @@
     <div class="header-ml">测试人员</div>
     <p class="search"><input type="text" name="" id="" value="" placeholder="搜索" class="ipt-sou" /><span>搜索</span></p>
 </div>
+<<<<<<< HEAD
 <!--<div class="bug-bar">
 	<p class="name-ml">发布人:<span class="bug-sp"></span></p>
+=======
+<div class="bug-bar" ng-repeat="x in data">
+	<p class="name-ml">发布人:<span class="bug-sp">{{x.from}}</span></p>
+>>>>>>> origin/master
 	<div class="bug-content">
 		<div class="bug-left">
-			<p class="bug-name">ddf</p>
-			<p class="bug-say">sadvfv</p>
+			<p class="bug-name">{{x.summary}}</p>
+			<p class="bug-say">{{x.description}}</p>
 		</div>
 		<div class="bug-right">
-			<p class="importance">重要性</p>
-			<p class="pinlv">频率</p>
-			<p class="errortion">错误状态</p>
+			<p class="importance">{{x.importance}}</p>
+			<p class="pinlv">{{x.frequency}}</p>
+			<p class="errortion">{{x.status}}</p>
 		</div>
 	</div>
+<<<<<<< HEAD
 	<p class="time-ml">2016-11-12</p>
 </div>-->
 
@@ -23,6 +29,11 @@
 
 <div class="addbug"><span class="btn-addbug">+</span></div>
 
+=======
+	<p class="time-ml">{{x.date}}</p>
+</div>
+<div class="addbug"><span class="btn-addbug" ng-click="ff">+</span></div>
+>>>>>>> origin/master
 <!--<div>
   <div ng-repeat="x in data">
   	{{x.summary}}
