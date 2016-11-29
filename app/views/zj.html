@@ -1,11 +1,11 @@
 <div id="tb">
+	<img src="images/1.png" ng-click="list()"/>
 	添加bug
 </div>
 <div id="ct">
 	<!-- 错误分类 -->
 	<p id="classify">错误分类：</p>
 	<div class="classify">
-		{{classify}}
 		<label>
 			<input type="radio" value="0" ng-model='classify' />设计
 		</label>
@@ -16,11 +16,36 @@
 			<input type="radio" value="2" ng-model='classify'/>后台
 		</label>
 	</div>
+	<!-- 指定给谁 -->
+	<div id="too">
+		<p id="to">指定给:</p>
+		<!-- ui人员 -->
+		<div class="wyc">
+			<label>
+				<input type="radio" value="wyc" ng-model='to' />wyc
+			</label>
+			<label>
+				<input type="radio" value="fbb" ng-model='to' />fbb
+			</label>
+		</div>
+		<!-- 前端 -->
+		<div class="lnn">
+			<label>
+				<input type="radio" value="lnn" ng-model='to' />lnn
+			</label>
+		</div>
+		<!-- 后台 -->
+		<div class="jgr">
+			<label>
+				<input type="radio" value="jgr" ng-model='to' />jgr
+			</label>
+		</div>
+
+	</div>
 	
 	<!-- 发生频率 -->
 	<p id="frequency">发生频率：</p>
 	<div class="frequency">
-		{{frequency}}
 		<label>
 			<input type="radio" value="0" ng-model='frequency'/>偶尔
 		</label>
@@ -31,7 +56,6 @@
 	<!-- 重要性 -->
 	<p id="importance">重要性：</p>
 	<div class="importance">
-		{{importance}}
 		<label>
 			<input type="radio" value="0" ng-model='importance'/>重要
 		</label>

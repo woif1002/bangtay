@@ -9,11 +9,17 @@
  */
 angular.module('xm11App')
   .controller('zjCtrl',['$rootScope','$scope','$state','$http', function($rootScope,$scope,$state,$http){
+      $scope.list=function(){
+        $state.go("list")
+        }
     $scope.fc=function(){
     	if(typeof $scope.classify == 'undefined'){
     		alert('错误分类不能为空')
     		return false
-    	}else if(typeof $scope.frequency == 'undefined'){
+    	}else if(typeof $scope.to == 'undefined'){
+            alert('发给谁不能为空')
+            return false
+        }else if(typeof $scope.frequency == 'undefined'){
     		alert('发生频率不能为空')
     		return false
     	}else if(typeof $scope.importance == 'undefined'){
@@ -26,15 +32,22 @@ angular.module('xm11App')
 		    alert('描述内容不能为空')
 		    return false
 		}
+        $scope.ud={}
+        $scope.time=new Date();
+        $scope.year=$scope.time.getFullYear();   //获取年
+        $scope.month=$scope.time.getMonth()+1;    //获取月
+        $scope.data2=$scope.time.getDate();       //获取日
+        $scope.hour=$scope.time.getHours();       //获取时
+        $scope.minutes=$scope.time.getMinutes();  //获取分
+        $scope.order_time=$scope.year+'-'+$scope.month+'-'+$scope.data2+' '+''+$scope.hour+':'+$scope.minutes;
     	$http({
     		url:'http://www.bugcenter.com.cn:1511/item/',
     		method:'post',
-    		data:{classify:$scope.classify,frequency:$scope.frequency,importance:$scope.importance,summary:$scope.summary,description:$scope.description,to:'this.charactor'	
+    		data:{classify:$scope.classify,frequency:$scope.frequency,importance:$scope.importance,status:'0',date:$scope.order_time,summary:$scope.summary,from:'csd',description:$scope.description,to:$scope.to	
     		}
     	}).success(function(e){
- 			
- 			console.log(e)
             alert('恭喜您  上传成功')
+            $state.go('list')
     	})
     }
   }]);

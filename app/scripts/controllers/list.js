@@ -11,7 +11,7 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
   $http({
     url:"http://www.bugcenter.com.cn:1511/users/"+$rootScope.user.uid,
     method:"get"
-  }).success(function(e){  
+  }).success(function(e){
   	if(e.charactor==0){
   		$scope.isshow=false;
   		$scope.cc='设计'
@@ -22,17 +22,25 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
       $scope.isshow=false;
       $scope.cc='后台'
     }else if(e.charactor==3){
-      $scope.isshow=true
+      $scope.isshow=true;
+      $scope.cc='测试'
+      $http({
+      url:"http://www.bugcenter.com.cn:1511/item/",
+      method:"get"
+    }).success(function(e){
+      console.log(e)
+      $scope.data=e       
+  })
     }
 
   })
+  
   $http({
     url:"http://www.bugcenter.com.cn:1511/item/",
     method:"get",
     params:{'to':$rootScope.user.username}
   }).success(function(e){
     console.log(e)
-    $scope.data=e
-        
-  })
+    $scope.data=e       
+  }) 
 }])
