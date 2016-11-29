@@ -40,7 +40,8 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
     method:"get",
     params:{'to':$rootScope.user.username}
   }).success(function(e){
-    console.log(e)
     $scope.data=e       
   }) 
+
+
 }])
