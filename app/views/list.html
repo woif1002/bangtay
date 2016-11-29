@@ -1,28 +1,11 @@
 <div class="big-bar">
     <div class="header-ml" ng-model="cc">{{cc}}</div>
-    <p class="search"><input type="text" name="" id="" value="" placeholder="搜索" class="ipt-sou" ng-model="M_aa"/><img src="../images/33.png"></p>
+    <p class="search"><input type="text" name="" id="" value="" placeholder="搜索" class="ipt-sou" ng-model="M_aa" id="xdt"/><img src="../images/33.png"></p>
+    <div style="width: 100%;height:2rem;"></div>
 </div>
-<!--<div class="bug-bar">
-	<p class="name-ml">发布人:<span class="bug-sp"></span></p>
 
-<div class="bug-bar" ng-repeat="x in data">
-	<p class="name-ml">发布人:<span class="bug-sp">{{x.from}}</span></p>
-	<div class="bug-content">
-		<div class="bug-left">
-			<p class="bug-name">{{x.summary}}</p>
-			<p class="bug-say">{{x.description}}</p>
-		</div>
-		<div class="bug-right">
-			<p class="importance">{{x.importance}}</p>
-			<p class="pinlv">{{x.frequency}}</p>
-			<p class="errortion">{{x.status}}</p>
-		</div>
-	</div>
-	<p class="time-ml">{{x.date}}</p>
-</div>-->
-
-<div class="content-list" >
-	<div class="bug-list" ng-repeat="x in data | filter:M_aa" ui-sref="xq({id:x.id})">
+<div class="content-list">
+	<div class="bug-list" ng-repeat="x in data | filter:M_aa" ui-sref="xq({id:x.id})"   >
 		<p class="bug-name">{{x.summary}}</p>
 		<p class="importance2"><a ng-class="{im:x.importance==0,im2:x.importance==1,im3:x.importance==2}">{{x.importance|imp}}</a></p>
 		<p class="time-ml">{{x.date}}</p>
@@ -31,14 +14,87 @@
 		
 	</div>
 </div>
+<!--<div class="page_btn clear">
+	<span class="page_box">
+		<a class="prev">上一页</a>
+		<span class="num">
+    		<span class="current_page">1</span>
+    		<span style="padding:0 3px;">/</span>
+			<span class="total"></span>
+		</span>
+		<a class="next">下一页</a>
+	</span>
+</div>-->
+
+
 
 <div class="addbug"><span class="btn-addbug"   ng-click="ff()">+</span></div>
 	<p class="time-ml">{{x.date}}</p>
 </div>
+<script type="text/javascript">
+	var t = xdt.offsetTop;
+	onscroll = function(){
+		var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+		if(scroll > t){
+			xdt.style.position = 'fixed';
+			xdt.style.top = '0';
+		}
+		else{
+			xdt.style.position = 'absolute';
+			xdt.style.top = '5rem';
+		}
+		//if()
+	};
 
-<!--<div>
-  <div ng-repeat="x in data">
-  	{{x.summary}}
-  </div>
-  <div ng-if="isshow">+</div>
-</div>-->
+</script>
+
+
+<!--<script type="text/javascript">
+ $(document).ready(function(){
+   $("ul li:gt(3)").hide();					//初始化，前面4条数据显示，其他的数据隐藏。
+   var total_q=$("ul li").index()+1;		//总数据
+   var current_page=4;						//每页显示的数据
+   var current_num=1;						//当前页数
+   var total_page= Math.round(total_q/current_page);//总页数 
+   var next=$(".next");					//下一页
+   var prev=$(".prev");					//上一页
+   $(".total").text(total_page);		//显示总页数
+   $(".current_page").text(current_num);	//当前的页数
+   //下一页
+   $(".next").click(function(){
+    if(current_num==7){
+      return false;					//如果大于总页数就禁用下一页
+     }
+     else{
+      $(".current_page").text(++current_num);		//点击下一页的时候当前页数的值就加1
+      $.each($('ul li'),function(index,item){
+       var start = current_page* (current_num-1);	//起始范围
+       var end = current_page * current_num;		//结束范围
+       if(index >= start && index < end){			//如果索引值是在start和end之间的元素就显示，否则就隐
+        $(this).show();
+       }else {
+        $(this).hide(); 
+       }
+      });
+     }
+   });
+   //上一页方法
+   $(".prev").click(function(){
+     if(current_num==1){
+      return false;
+     }else{
+      $(".current_page").text(--current_num);
+      $.each($('ul li'),function(index,item){
+       var start = current_page* (current_num-1);		//起始范围
+       var end = current_page * current_num;			//结束范围
+       if(index >= start && index < end){				//如果索引值是start和end之间的元素就显示，否则就隐藏
+        $(this).show();
+       }else {
+        $(this).hide(); 
+       }
+      });  
+     }
+    })
+ })
+</script>-->
+
