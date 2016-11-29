@@ -31,7 +31,10 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
     method:"get",
     params:{'to':$rootScope.user.username}
   }).success(function(e){
+<<<<<<< HEAD
+=======
     console.log(e)
+>>>>>>> origin/HEAD
     $scope.data=e
         
   })

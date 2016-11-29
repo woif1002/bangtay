@@ -1,28 +1,11 @@
 <div class="big-bar">
     <div class="header-ml" ng-model="cc">{{cc}}</div>
-    <p class="search"><input type="text" name="" id="" value="" placeholder="搜索" class="ipt-sou" ng-model="M_aa"/><img src="../images/33.png"></p>
+    <p class="search"><input type="text" name="" id="" value="" placeholder="搜索" class="ipt-sou" ng-model="M_aa" id="xdt"/><img src="../images/33.png"></p>
+    <div style="width: 100%;height:2rem;"></div>
 </div>
-<!--<div class="bug-bar">
-	<p class="name-ml">发布人:<span class="bug-sp"></span></p>
 
-<div class="bug-bar" ng-repeat="x in data">
-	<p class="name-ml">发布人:<span class="bug-sp">{{x.from}}</span></p>
-	<div class="bug-content">
-		<div class="bug-left">
-			<p class="bug-name">{{x.summary}}</p>
-			<p class="bug-say">{{x.description}}</p>
-		</div>
-		<div class="bug-right">
-			<p class="importance">{{x.importance}}</p>
-			<p class="pinlv">{{x.frequency}}</p>
-			<p class="errortion">{{x.status}}</p>
-		</div>
-	</div>
-	<p class="time-ml">{{x.date}}</p>
-</div>-->
-
-<div class="content-list" >
-	<div class="bug-list" ng-repeat="x in data | filter:M_aa" ui-sref="xq({id:x.id})">
+<div class="content-list">
+	<div class="bug-list" ng-repeat="x in data | filter:M_aa" ui-sref="xq({id:x.id})"   >
 		<p class="bug-name">{{x.summary}}</p>
 		<p class="importance2"><a ng-class="{im:x.importance==0,im2:x.importance==1,im3:x.importance==2}">{{x.importance|imp}}</a></p>
 		<p class="time-ml">{{x.date}}</p>
@@ -31,15 +14,36 @@
 		
 	</div>
 </div>
+<!--<div class="page_btn clear">
+	<span class="page_box">
+		<a class="prev">上一页</a>
+		<span class="num">
+    		<span class="current_page">1</span>
+    		<span style="padding:0 3px;">/</span>
+			<span class="total"></span>
+		</span>
+		<a class="next">下一页</a>
+	</span>
+</div>-->
 
 <div class="addbug"><span class="btn-addbug" ng-click="ff()">+</span></div>
-
 	<p class="time-ml">{{x.date}}</p>
 </div>
+<script type="text/javascript">
+	var t = xdt.offsetTop;
+	onscroll = function(){
+		var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+		if(scroll > t){
+			xdt.style.position = 'fixed';
+			xdt.style.top = '0';
+		}
+		else{
+			xdt.style.position = 'absolute';
+			xdt.style.top = '5rem';
+		}
+		//if()
+	};
 
-<!--<div>
-  <div ng-repeat="x in data">
-  	{{x.summary}}
-  </div>
-  <div ng-if="isshow">+</div>
-</div>-->
+</script>
+
+
