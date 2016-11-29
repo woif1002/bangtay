@@ -42,24 +42,9 @@
 			<input type="radio" value="2" ng-model='importance'/>一般
 		</label>
 	</div>
-	<!-- 错误状态 -->
-	<p id="status">错误状态：</p>
-	<div class="status">
-		{{status}}
-		<label>
-			<input type="radio" value="0" ng-model='status'/>已指派
-		</label>
-		<label>
-			<input type="radio" value="1" ng-model='status'/>已解决
-		</label>
-		<label>
-			<input type="radio" value="2" ng-model='status'/>已关闭
-		</label>
-	</div>
-	
 	<!-- 简介 -->
 	<p>简介</p>
-	<text-angular ng-model="summary"></text-angular>
+	<input type="text" ng-model="summary" />
 	<!-- 描述 -->
 	<p>描述</p>
 	<text-angular ng-model="description"></text-angular>
