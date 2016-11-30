@@ -44,13 +44,8 @@
 	height:1rem;
 	margin:0 auto;
 }
-
-
-
-
 .content-list{
 	width:100%;
-	height:3.1rem;
 	margin-top:4.9rem;
 	margin-bottom:1rem;
 }
@@ -105,7 +100,7 @@
 	bottom:0;
 	}
 .btn-addbug{
-	display: block;
+	display:block;
 	margin:0 auto;
 	width:2rem;
 	height:2rem;
@@ -115,29 +110,21 @@
     font-size:2rem;
     text-align:center;
     line-height:1.5rem;
-     margin-bottom:2rem;
-    
+    margin-bottom:2rem;
 }
-
-
 .page_btn{
 	width:100%;
 	height:3rem;
 	color:#000000;
+	float:left;
 }
 .page_btn span{
-    text-align: center;
-	/*display: block;*/
-	
+    text-align: center;	
 	height:3rem;
 	line-height:3rem;
 	float:left;
 	color:#000000;
 	font-size:0.75rem;
-/*	background:red;*/
-/*position: absolute;
-bottom:auto;*/
-
 }
 .page_btn span a{
 	width:auto;
@@ -145,3 +132,53 @@ bottom:auto;*/
 	float:left;
 	text-align:center;
 }
+.nextLink,.prevLink{
+    font-size: 12px;
+     line-height: 24px;
+   height: 24px;
+    border: solid 1px #aaa;
+    color: #999;
+    padding: 0 9px;
+    margin: 0 0 0 5px;
+    list-style: none;
+    background: #f2f2f2;
+    float: left;
+    cursor: pointer;
+}
+.prevLink:hover,.nextLink:hover {
+    background: #aaa !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+.step {   
+    display: block;
+    line-height: 24px;
+    height: 24px;
+    border: solid 1px #aaa;
+    color: #999;
+    background: #fff;
+    padding: 0 9px;
+    font-size: 12px;
+    float: left;
+    margin: 0 0 0 5px;
+    list-style: none;
+    cursor: pointer;
+}
+.currentStep{
+    border-color: #fff;
+    padding: 0 4px;
+    color: #f90;
+    font-weight: bold;
+    float: left;
+    display: block;
+    line-height: 24px;
+    height: 24px;
+    padding: 0 9px;
+    font-size: 12px;
+    float: left;
+    margin: 0 0 0 5px;
+    list-style: none;
+    cursor: pointer;
+ }
+ .jiahaoa{width:3rem;height:1.5rem;float:left;font-size:20px;margin:0 2rem 0 3.5rem;}
+ .jiahaob{width:3rem;height:1.5rem;float:left;font-size:20px}

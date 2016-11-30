@@ -17,6 +17,9 @@ angular.module('xm11App')
     		alert('错误分类不能为空')
     		return false
     	}else if(typeof $scope.to == 'undefined'){
+            alert('指派给谁不能为空')
+            return false
+        }else if(typeof $scope.to == 'undefined'){
             alert('发给谁不能为空')
             return false
         }else if(typeof $scope.frequency == 'undefined'){
@@ -49,5 +52,20 @@ angular.module('xm11App')
             alert('恭喜您  上传成功')
             $state.go('list')
     	})
+    }
+    var index=0;
+    var ctt=document.getElementById('classif');
+    var lac=ctt.getElementsByTagName('label');
+    var tc=too.getElementsByTagName('div');
+    for(var i=0;i<lac.length;i++){
+    	lac[i].index=i;
+    	lac[i].onclick=function(){
+    		for(var i=0;i<tc.length;i++){
+              tc[i].style.display="none"
+            }
+        too.style.display="block";
+		tc[this.index].style.display='block';
+		index=this.index;
+    	}
     }
   }]);

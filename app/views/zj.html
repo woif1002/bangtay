@@ -5,7 +5,7 @@
 <div id="ct">
 	<!-- 错误分类 -->
 	<p id="classify">错误分类：</p>
-	<div class="classify">
+	<div class="classify" id="classif">
 		<label>
 			<input type="radio" value="0" ng-model='classify' />设计
 		</label>
@@ -17,10 +17,10 @@
 		</label>
 	</div>
 	<!-- 指定给谁 -->
-	<div id="too">
+	<div id="too" style="display:none">
 		<p id="to">指定给:</p>
 		<!-- ui人员 -->
-		<div class="wyc">
+		<div class="wyc" style="display:none">
 			<label>
 				<input type="radio" value="wyc" ng-model='to' />wyc
 			</label>
@@ -29,15 +29,17 @@
 			</label>
 		</div>
 		<!-- 前端 -->
-		<div class="lnn">
+		<div class="lnn" style="display:none">
 			<label>
 				<input type="radio" value="lnn" ng-model='to' />lnn
+				<input type="radio" value="mg" ng-model='to' />mg
 			</label>
 		</div>
 		<!-- 后台 -->
-		<div class="jgr">
+		<div class="jgr" style="display:none">
 			<label>
 				<input type="radio" value="jgr" ng-model='to' />jgr
+				<input type="radio" value="sp" ng-model='to' />sp
 			</label>
 		</div>
 

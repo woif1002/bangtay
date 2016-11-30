@@ -3,14 +3,34 @@
 </div>-->
 <div class="xq-cont">
 	<!--{{id}}-->
-	<p class="xq-js"><img src="images/1.png" ng-click="list()"/>bug详情</p>
-	<p class="faburen">发布人:<span>{{data.from}}</span></p>
-	<p class="faburen" ng-model="cwfl">错误分类:<span>{{cwfl}}</span></p>
-	<p class="inport" ng-model="imp">重要性:<a ng-class="im">{{imp}}</a></p>
-	<p class="pin" ng-model="fre">频率:<span>{{fre}}</span></p>
-	<p class="errors" ng-model="sta">错误状态:<span>{{sta}}</span></p>
-	<p class="times">时间:<span>{{data.date}}</span></p>
-	<p class="bugs-name">bug名称:<span>{{data.summary}}</span></p>
-	<div class="bug-xq"><p class="xqms">详情:</p><span class="bug-n">{{data.description}}</span></div>
-    <button class="xiufu" ng-if="data.status==0" ng-click="xf()">修复</button>
+	<p class="xq-js">
+		<img src="images/1.png" ng-click="list()"/>bug详情
+	</p>
+	<p class="faburen">发布人:
+		<span>{{data.from}}</span>
+	</p>
+	<p class="faburen" ng-model="cwfl">错误分类:
+		<span>{{cwfl}}</span>
+	</p>
+	<p class="inport" ng-model="imp">重要性:
+		<a ng-class="im">{{imp}}</a>
+	</p>
+	<p class="pin" ng-model="fre">频率:
+		<span>{{fre}}</span>
+	</p>
+	<p class="errors" ng-model="sta">错误状态:
+		<span>{{sta}}</span>
+	</p>
+	<p class="times">时间:
+		<span>{{data.date}}</span>
+	</p>
+	<p class="bugs-name">bug名称:
+		<span>{{data.summary}}</span>
+	</p>
+	<div class="bug-xq">
+		<p class="xqms">详情:</p>
+		<span class="bug-n">{{data.description}}</span>
+	</div>
+    <button class="xiufu" ng-if="data.charactor!=3" ng-if="data.status==0" ng-show="data.status==0" ng-click="xf()"/>修复</button>
+    <button class="xf" ng-if="data.charactor==3" ng-if="data.status==1" ng-show="data.status==1"  ng-hide="data.status==2" ng-click="fx()"/>关闭</button>
 </div>
