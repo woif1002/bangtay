@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular.module('xm11App', ["ui.router","textAngular"]).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+angular.module('xm11App', ["ui.router","textAngular","chart.js"]).config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 	$urlRouterProvider.when('','/login')
 	$stateProvider.state('login',{
 		url:'/login',
@@ -26,6 +26,10 @@ angular.module('xm11App', ["ui.router","textAngular"]).config(['$stateProvider',
 	    url:'/xq/:id',
 	    templateUrl:"views/xq.html",
 	    controller:"xqCtrl"
+  	}).state('tu',{
+	    url:'/tu/:id',
+	    templateUrl:"views/tu.html",
+	    controller:"tuCtrl"
   	})
 }]).filter("imp",function(){
 	return function(e){
@@ -37,4 +41,14 @@ angular.module('xm11App', ["ui.router","textAngular"]).config(['$stateProvider',
 			return "一般"
 		}
 	}
-});
+}) .config(['ChartJsProvider', function (ChartJsProvider) {
+    // Configure all charts
+    ChartJsProvider.setOptions({
+      chartColors: ['#FF5252', '#FF8A80'],
+      responsive: false
+    });
+    // Configure all line charts
+    ChartJsProvider.setOptions('line', {
+      showLines: false
+    });
+  }]);

@@ -10,6 +10,8 @@ angular.module('xm11App')
     		method:'get',		
     	}).success(function(e){   		
     		$scope.data=e
+    		   
+    		   //重要性
     		    if(e.importance == 0){
     			    $scope.im="im"
     			    $scope.imp="重要"
@@ -49,9 +51,14 @@ angular.module('xm11App')
     		    	$scope.cwfl ="后台"
     		    }
     	})   	
+    	
+    	
     $scope.list=function(){
     	$state.go("list")
     }
+    
+    
+    
     $scope.xf=function(){
         $http({
     			url:'http://www.bugcenter.com.cn:1511/item/'+$stateParams.id,

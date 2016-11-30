@@ -1,0 +1,27 @@
+<div class="tu-list"><img src="../images/1.png"><span>图表展示</span></div>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist" id="nav">
+  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">折线图</a></li>
+  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">圆环图</a></li>
+  <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">条图</a></li>
+  <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">饼形图</a></li>
+<!-- Tab panes -->
+<div class="tab-content" style="display:block">
+  <canvas class="chart chart-bar" chart-data="data" chart-labels="labels" 
+    chart-series="series" chart-click="onClick"></canvas> 
+</div>
+<div class="tab-content">
+  <canvas class="chart chart-radar" chart-data="data" chart-labels="labels" 
+    chart-series="series" chart-click="onClick"></canvas> 
+</div>
+<div class="tab-content">
+  <canvas class="chart chart-doughnut" chart-data="data" chart-labels="labels" 
+    chart-series="series" chart-click="onClick"></canvas> 
+</div>
+<div class="tab-content">
+  <canvas class="chart chart-polar-area" chart-data="data" chart-labels="labels" 
+    chart-series="series" chart-click="onClick"></canvas> 
+</div>
+
+</ul>
