@@ -9,6 +9,7 @@
  */
 angular.module('xm11App')
   .controller('loginCtrl',['$rootScope','$scope','$state','$http', function($rootScope,$scope,$state,$http){
+    // 点击登录页面
     $scope.fn=function(){
     	$http({
     		url:'http://www.bugcenter.com.cn:1511/users/login',

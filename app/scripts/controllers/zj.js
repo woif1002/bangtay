@@ -9,8 +9,9 @@
  */
 angular.module('xm11App')
   .controller('zjCtrl',['$rootScope','$scope','$state','$http', function($rootScope,$scope,$state,$http){
-      $scope.list=function(){
-        $state.go("list")
+    // 返回上一步
+        fh.onclick=function(){
+            history.go(-1)
         }
     $scope.fc=function(){
     	if(typeof $scope.classify == 'undefined'){
