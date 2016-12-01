@@ -4,6 +4,11 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
 		$state.go('login')
 		return;
 	}
+  // 返回上一步
+  $scope.fh=function(){
+    $state.go("login")
+  }
+  // 跳转到增加页面
   $scope.ff=function(){
     $state.go('zj')
   }
@@ -83,11 +88,7 @@ $scope.shang=function(){
             $scope.data=e       
           })
     }
-
   })
-  
-  
-  
   //把重要性的一些东西存到数组里，便于tu页面使用
   $rootScope.Imarr = []
   $rootScope.Imarr1 = []

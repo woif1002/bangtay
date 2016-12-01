@@ -1,5 +1,10 @@
 angular.module('xm11App').controller("tuCtrl",['$scope','$state','$http','$rootScope',"$timeout",function($scope,$state,$http,$rootScope,$timeout){
 
+// 返回上一步
+
+ $scope.fh=function(){
+      $state.go("list")
+    }
 //选项卡功能
 var index=0;
 var Onav=document.getElementById('nav');

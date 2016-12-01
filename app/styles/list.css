@@ -8,13 +8,13 @@
     }
 .header-ml{
 	width:100%;
-	height:1.6rem;
+	height:2.6rem;
 	background:black;
 	color:white;
 	font-size:0.7rem;	
 	text-align:center;
 	padding-left:1rem;
-	line-height:1.6rem;
+	line-height:2.6rem;
 	font-family: "微软雅黑";
 	}
 .zhexian{
@@ -46,7 +46,6 @@
 	width:1.3rem;
 	height:1.3rem;
 	float:right;
-    margin-top:0.4rem;
     margin-right:1rem;
     display:block;
 }
@@ -86,8 +85,8 @@
 .content-list{
 	width:100%;
 	height:auto;
-	margin-top:4.9rem;
-	margin-bottom:-1.55rem;
+	margin-top:5.9rem;
+	margin-bottom:1rem;
 	overflow: auto;
 }
 .bug-list{
@@ -221,5 +220,5 @@
     list-style: none;
     cursor: pointer;
  }
- .jiahaoa{width:3rem;height:1.5rem;float:left;font-size:20px;margin:0 2rem 0 3.5rem;}
- .jiahaob{width:3rem;height:1.5rem;float:left;font-size:20px}
+ .jiahaoa{height:1.5rem;float:left;font-size:20px;margin:0 2rem 0 3.5rem;}
+ .jiahaob{height:1.5rem;float:left;font-size:20px}

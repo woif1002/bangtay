@@ -4,7 +4,10 @@ angular.module('xm11App')
 				$state.go('login')
 				return;
 			}
-   
+    // 返回上一步
+    $scope.fh=function(){
+      $state.go("list")
+    }
    // 获取详情
   	$scope.id=$stateParams
     	$http({

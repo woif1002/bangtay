@@ -9,9 +9,10 @@
  */
 angular.module('xm11App')
   .controller('zjCtrl',['$rootScope','$scope','$state','$http', function($rootScope,$scope,$state,$http){
-      $scope.list=function(){
+    // 返回上一步
+    $scope.fh=function(){
         $state.go("list")
-        }
+    }
     $scope.fc=function(){
     	if(typeof $scope.classify == 'undefined'){
     		alert('错误分类不能为空')

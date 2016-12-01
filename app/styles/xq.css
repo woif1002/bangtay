@@ -1,9 +1,7 @@
 .xq-cont{
 	height:auto;
-	/*padding-left:2rem;*/
 }
 .xq-cont span{
-	/*height:auto;*/
 	padding-left:0.5rem;
 }
 .xq-js{
@@ -13,8 +11,7 @@
 	font-weight:600;
 	color:orange;
     margin-top:0.5rem;
-	line-height:2rem;
-	
+	line-height:2.4rem;
 }
 .xq-js img{
 	width:0.8rem;
