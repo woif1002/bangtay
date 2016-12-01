@@ -5,8 +5,8 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
 		return;
 	}
   // 返回上一步
-  fh.onclick=function(){
-    history.go(-1)
+  $scope.fh=function(){
+    $state.go("login")
   }
   // 跳转到增加页面
   $scope.ff=function(){

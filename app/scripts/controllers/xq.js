@@ -5,8 +5,8 @@ angular.module('xm11App')
 				return;
 			}
     // 返回上一步
-    fh.onclick=function(){
-        history.go(-1)
+    $scope.fh=function(){
+      $state.go("list")
     }
    // 获取详情
   	$scope.id=$stateParams
