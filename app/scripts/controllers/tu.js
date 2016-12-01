@@ -23,6 +23,7 @@ $scope.tulist=function(){
 }
 
 
+
 //页面数据调取
   $scope.labels = ["重要","中等","一般"];
 
