@@ -22,6 +22,13 @@ for(var i=0;i<Oli.length;i++){
 	}
 }
 
+//跳转页面
+$scope.tulist=function(){
+	$state.go("list")
+}
+
+
+
 //页面数据调取
   $scope.labels = ["重要","中等","一般"];
 
