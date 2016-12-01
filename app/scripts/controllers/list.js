@@ -49,7 +49,6 @@ $scope.shang=function(){
 	$scope.last = 'zhexian'
 	//点击跳转图标页
     $scope.Dinaji=function(){
-//  	alert(1)
    	 	if($scope.last=="zhexian"){
    	 		$scope.last = 'zhexian1'
    	 	}else{
@@ -113,3 +112,4 @@ $scope.shang=function(){
     }
   }) 
 
+}])
