@@ -7,14 +7,15 @@
     
     <p class="search">
     	<input type="text" name="" id="" value="" placeholder="搜索" class="ipt-sou" ng-model="M_aa" id="xdt"/>
-    	<img src="../images/33.png">
+    	<img src="images/33.png">
     </p>
-    
 </div>
 
 
 
 <div class="content-list">
+	<div class="bug-list" ng-repeat="x in data | filter:M_aa | limitTo : 6" ui-sref="xq({id:x.id})">
+		<div class="bug-name">{{x.summary}}</div>
 	<div ng-class="last" ng-click="tiaotu()">图表</div> 
 	<div class="bug-list" ng-repeat="x in data | filter:M_aa" ui-sref="xq({id:x.id}) ">
 		<p class="bug-name">{{x.summary}}</p>
@@ -22,14 +23,13 @@
 		<p class="time-ml">{{x.date}}</p>
 	</div>
 </div>
-
-
+<!-- 分页 -->
+<button type="submit" class="jiahaoa" ng-click="shang()" >上一页</button>
+<button type="submit" class="jiahaob" ng-click="next() ">下一页</button>
+<!-- 添加bug页面 -->
 
 <div class="addbug" ng-if="isshow">
 	<span class="btn-addbug" ng-click="ff()">+</span>
 </div>
 	<p class="time-ml">{{x.date}}</p>
 </div>
-
-
-

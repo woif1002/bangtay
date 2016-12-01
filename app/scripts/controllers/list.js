@@ -4,13 +4,50 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
 		$state.go('login')
 		return;
 	}
+  $scope.ff=function(){
+    $state.go('zj')
+  }
+  //分页
+var num=0;
+$http({
+    url:'http://www.bugcenter.com.cn:1511/item',
+    method:"GET",
+    params:{"$skip":num,"$limit":6}
+}).success(function(e){
+    $scope.data=e 
+});
 
+$scope.next=function(){
+    num+=6;
+    $http({
+      url:'http://www.bugcenter.com.cn:1511/item',
+      method:"GET",
+      params:{"$skip":num,"$limit":6}
+    }).success(function(e){
+      $scope.data=e
+    })
+}
+$scope.shang=function(){
+    num-=6;
+    if(num<0){
+      num=0;
+    }
+    $http({
+      url:'http://www.bugcenter.com.cn:1511/item',
+      method:"GET",
+      params:{"$skip":num,"$limit":6}
+    }).success(function(e){
+      $scope.data=e
+    })
+}
+
+// 详情开始
 	$scope.ff=function(){
 	    $state.go('zj')
 	}
 	
 	$scope.last = 'zhexian'
-	//点击跳转涂彪页
+	//点击跳转图标页
     $scope.Dinaji=function(){
 //  	alert(1)
    	 	if($scope.last=="zhexian"){
@@ -22,10 +59,7 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
     $scope.tiaotu =function(){
     	$state.go('tu')
     }
-   
-     
-     
-     
+
   $http({
     url:"http://www.bugcenter.com.cn:1511/users/"+$rootScope.user.uid,
     method:"get"
@@ -42,12 +76,13 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
     }else if(e.charactor==3){
       $scope.isshow=true;
       $scope.cc='测试'
-      $http({
-      url:"http://www.bugcenter.com.cn:1511/item/",
-      method:"get"
-    }).success(function(e){
-      $scope.data=e       
-  })
+        $http({
+        url:"http://www.bugcenter.com.cn:1511/item/",
+        method:"get"
+          }).success(function(e){
+            console.log(e)
+            $scope.data=e       
+          })
     }
 
   })
@@ -63,6 +98,7 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
     method:"get",
     params:{'to':$rootScope.user.username}
   }).success(function(e){
+    console.log(e)     
     $scope.data=e 
     for(var i =0;i<e.length;i++){
     	if(e[i].importance==0){
@@ -76,10 +112,4 @@ angular.module('xm11App').controller("listCtrl",['$scope','$state','$http','$roo
     	}
     }
   }) 
-	
-	
-	
-	
-	
 
-}])

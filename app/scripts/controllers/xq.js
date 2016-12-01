@@ -4,11 +4,14 @@ angular.module('xm11App')
 				$state.go('login')
 				return;
 			}
+   
+   // 获取详情
   	$scope.id=$stateParams
     	$http({
     		url:'http://www.bugcenter.com.cn:1511/item/'+$stateParams.id,
-    		method:'get',		
-    	}).success(function(e){   		
+    		method:'get'
+    	}).success(function(e){ 
+        $scope.arr = e;  		
     		$scope.data=e
     		   
     		   //重要性
@@ -39,10 +42,9 @@ angular.module('xm11App')
     		    }else if(e.status ==2){
     		    	$scope.sta ="已关闭"
     		    }
-    		    
-    		    
+
+
     		    //错误分类
-    		    
     		    if(e.classify ==0){
     		    	$scope.cwfl ="ui"
     		    }else if(e.classify ==1){
@@ -56,9 +58,7 @@ angular.module('xm11App')
     $scope.list=function(){
     	$state.go("list")
     }
-    
-    
-    
+    // 修复按钮
     $scope.xf=function(){
         $http({
     			url:'http://www.bugcenter.com.cn:1511/item/'+$stateParams.id,
@@ -68,6 +68,17 @@ angular.module('xm11App')
 	    		$scope.sta ="已解决";
 	    		$scope.data=e
 	    	})
+    }
+    // 关闭按钮
+    $scope.fx=function(){
+        $http({
+                url:'http://www.bugcenter.com.cn:1511/item/'+$stateParams.id,
+                method:'put',
+                data:{status:2}
+            }).success(function(e){  
+                $scope.sta ="已关闭";
+                $scope.data=e
+            })
     }
     
    
