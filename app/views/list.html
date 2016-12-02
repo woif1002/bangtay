@@ -15,6 +15,7 @@
 
 <div class="content-list">
 	<div ng-class="last" ng-click="tiaotu()">图表</div> 
+
 	<div class="bug-list" ng-repeat="x in data | filter:M_aa | limitTo : 6" ui-sref="xq({id:x.id}) ">
 		<p class="bug-name">{{x.summary}}</p>
 		<p class="importance2"><a ng-class="{im:x.importance==0,im2:x.importance==1,im3:x.importance==2}">{{x.importance|imp}}</a></p>
