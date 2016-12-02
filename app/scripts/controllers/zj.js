@@ -53,7 +53,7 @@ angular.module('xm11App')
             alert('恭喜您  上传成功')
             $state.go('list')
     	})
-    }
+    };
     var index=0;
     var ctt=document.getElementById('classif');
     var lac=ctt.getElementsByTagName('label');
@@ -68,5 +68,5 @@ angular.module('xm11App')
 		tc[this.index].style.display='block';
 		index=this.index;
     	}
-    }
+    };
   }]);

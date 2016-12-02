@@ -55,7 +55,7 @@ angular.module('xm11App')
     		    }else if(e.classify ==2){
     		    	$scope.cwfl ="后台"
     		    }
-    	})   	
+    	}); 	
     	
     	
     $scope.list=function(){
@@ -71,7 +71,7 @@ angular.module('xm11App')
 	    		$scope.sta ="已解决";
 	    		$scope.data=e
 	    	})
-    }
+    };
     // 关闭按钮
     $scope.fx=function(){
         $http({
@@ -82,8 +82,5 @@ angular.module('xm11App')
                 $scope.sta ="已关闭";
                 $scope.data=e
             })
-    }
-    
-   
-    
+    }; 
   }]);

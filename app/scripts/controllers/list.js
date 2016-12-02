@@ -31,7 +31,7 @@ $scope.next=function(){
     }).success(function(e){
       $scope.data=e
     })
-}
+};
 $scope.shang=function(){
     num-=6;
     if(num<0){
@@ -44,12 +44,12 @@ $scope.shang=function(){
     }).success(function(e){
       $scope.data=e
     })
-}
+};
 
 // 详情开始
 	$scope.ff=function(){
 	    $state.go('zj')
-	}
+	};
 	
 	$scope.last = 'zhexian'
 	//点击跳转图标页
@@ -60,10 +60,10 @@ $scope.shang=function(){
    	 	}else{
    	 		$scope.last = 'zhexian'
    	 	}
-    } 
+    } ;
     $scope.tiaotu =function(){
     	$state.go('tu')
-    }
+    };
 
   $http({
     url:"http://www.bugcenter.com.cn:1511/users/"+$rootScope.user.uid,
@@ -89,7 +89,7 @@ $scope.shang=function(){
             $scope.data=e       
           })
     }
-  })
+  });
   //把重要性的一些东西存到数组里，便于tu页面使用
   $rootScope.Imarr = []
   $rootScope.Imarr1 = []
@@ -112,5 +112,5 @@ $scope.shang=function(){
     		 $rootScope.Imarr2.push(e[i])
     	}
     }
-  }) 
-}])
+  });
+}]);
