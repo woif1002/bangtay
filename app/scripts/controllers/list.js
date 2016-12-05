@@ -88,6 +88,13 @@ $scope.shang=function(){
             $scope.data=e       
           })
     }
+    $http({
+    url:"http://www.bugcenter.com.cn:1511/item",
+    method:"get",
+    params:{'to':$rootScope.user.username}
+	  }).success(function(e){
+	    $scope.data=e
+	  })
   });
   //把重要性的一些东西存到数组里，便于tu页面使用
   $rootScope.Imarr = []
@@ -111,11 +118,5 @@ $scope.shang=function(){
     		 $rootScope.Imarr2.push(e[i])
     	}
     }
-<<<<<<< HEAD
-  });
-}]);
-=======
   }) 
-
 }])
->>>>>>> origin/master
